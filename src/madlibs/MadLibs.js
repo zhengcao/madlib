@@ -3,7 +3,7 @@ export default [
     title: "Vacations",
     getWord: function(key) {
       return this.words.find((word) => {
-        return word.key == key;
+        return word.key === key;
       }).value;
     },
     getText: function() {
