@@ -1,13 +1,13 @@
 # MadLib
-In this project, you will explore handling input events and submission by create a [Mad Lib](https://en.wikipedia.org/wiki/Mad_Libs) game.
+In this project, you will explore handling input events and submission by creating a [Mad Lib](https://en.wikipedia.org/wiki/Mad_Libs) game.
 
-This is a [Stage]() project. You will be submitting a PR for this project at the end.
+This is a [Stage 2](https://github.com/Ada-Developers-Academy/pedagogy/blob/master/rule-of-three.md#stage-2) individual project. You will be submitting a PR for this project at the end.
 
 ## Learning Goals
-- Extend code provided
 - Practice using events
 - Pass custom information to an event handler function
 - Dynamically construct components based on data
+- Extend code provided
 
 ## Scaffolding
 The data structure that drives the UI is madlibs/MadLibs.js. To complete your objectives, you will not need to modify this file. The data in this file is an array of Madlib objects. A MadLib object has three properties that you'll utilize:
@@ -21,6 +21,12 @@ The data structure that drives the UI is madlibs/MadLibs.js. To complete your ob
 As a starting point, review the code that has been provided to you.
 
 To work through the analysis of the existing code, determine how to get the application to load a **random** MadLib, instead of loading the first one which it will currently always do by default.
+
+
+### Wave 1
+- `WordForm.js` should render text inputs for each type of word
+
+
 
 ### Wave 1
 * `WordForm.js` should render text inputs for all word objects in the array - use the `label` property in the word object for the value of the input's [placeholder](http://www.w3schools.com/Tags/att_input_placeholder.asp) attribute.
