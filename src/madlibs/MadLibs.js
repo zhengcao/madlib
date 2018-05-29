@@ -13,15 +13,19 @@ export default [
     words: [
       {
         "key": "adjective_1",
+        "label": "Adjective 1"
       },
       {
         "key": "adjective_2",
+        "label": "Adjective 2"
       },
       {
         "key": "noun_1",
+        "label": "Noun 1"
       },
       {
         "key": "noun_2",
+        "label": "Noun 2"
       }
     ]
   },
