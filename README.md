@@ -24,10 +24,10 @@ To work through the analysis of the existing code, determine how to modify the a
 
 ### Wave 1
 1. Create a new component which will render the forms inputs for each word in the puzzle.
-  - You should utilize the `selectedMadLib` variable stored in the `App` components `state` to gather the words you need.
-  - You may want to use the `placeholder` HTML attribute to include the `label` property for each word.
+    - You should utilize the `selectedMadLib` variable stored in the `App` components `state` to gather the words you need.
+    - You may want to use the `placeholder` HTML attribute to include the `label` property for each word.
 1. Tie each input to an event handler that will modify the state of the `selectedMadLib`.
-  - You will need to pass not only the input's value but also information about _which_ input has changed through this event handler.
+    - You will need to pass not only the input's value but also information about _which_ input has changed through this event handler.
 1. Modify the rendering of the `Story` component to only display once all of the input words have been filled out.
 
 ### Wave 2
