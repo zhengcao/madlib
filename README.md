@@ -32,6 +32,11 @@ To work through the analysis of the existing code, determine how to modify the a
     - You will need to pass not only the input's value but also information about _which_ input has changed through this event handler.
 1. Modify `App.js` to only render the `Story` component once the form has been submitted.
 
+#### Tips
+The form component needs to be generic enough to support all of the different MadLibs from our data file. This can be challenging to get right when you haven't had a chance to interact with the data being used.
+
+For this reason we suggest that you try first implementing the form with a single word from the first MadLib. Once that is working and the Story component's text is properly filled out with that single word, move on to supporting all of the words needed for the MadLib.
+
 ### Wave 2
 Instead of selecting a random MadLib puzzle for the user, allow the user to choose from a dropdown which puzzle they want to play.
 - Create a dropdown menu that allows a user to switch the selected MadLib to play (this should be a new component)
