@@ -30,13 +30,17 @@ To work through the analysis of the existing code, determine how to modify the a
     - You may want to use the `placeholder` HTML attribute to include the `label` property for each word.
 1. Tie each input to an event handler that will modify the state of the `selectedMadLib`.
     - You will need to pass not only the input's value but also information about _which_ input has changed through this event handler.
-1. Modify `App.js` to only render the `Story` component once all of the input words have been filled out.
+1. Modify `App.js` to only render the `Story` component once the form has been submitted.
 
 ### Wave 2
 Instead of selecting a random MadLib puzzle for the user, allow the user to choose from a dropdown which puzzle they want to play.
 - Create a dropdown menu that allows a user to switch the selected MadLib to play (this should be a new component)
 - Gather the titles from the MadLibs object, and display those as the dropdown options
 - Using the `onChange` event, set the `selectedMadLib` object in the `App` component's state to the selected MadLib
+
+**Questions:**
+- If the form has already been submitted, should you continue to display the new story?
+- What should happen to the existing words when you switch stories?
 
 ## What We're Looking For
 You can look [here](./feedback.md) for what your instructors will look for in your submission.
