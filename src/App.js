@@ -46,7 +46,9 @@ class App extends Component {
   }
 
   updateStoryForm = (storyIndex) => {
-    console.log(storyIndex);
+    this.setState({
+      selectedMadLib: MadLibs[storyIndex],
+    });
   }
 
   render() {
