@@ -28,6 +28,7 @@ class NewStoryForm extends Component {
               <input
                name={word.key}
                onChange={(event) => { this.onFieldChange(word.key, event.target.value) }}
+               autoComplete={"off-" + Math.random()}
                />
             </section>
           );

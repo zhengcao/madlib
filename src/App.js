@@ -17,8 +17,6 @@ class App extends Component {
     this.updateWord = this.updateWord.bind(this);
   }
 
-  // Update the value of a word in the selected
-  // mad lib using setState
   updateWord(key, value) {
     const updatedMadLib = this.state.selectedMadLib;
     const changedWord = updatedMadLib.words.find((word) => {
@@ -26,6 +24,12 @@ class App extends Component {
     });
     changedWord.value = value;
     this.setState({selectedMadLib: updatedMadLib});
+  }
+
+  changeStoryVisibility = () => {
+    this.setState({
+      isStoryVisible: true,
+    });
   }
 
   showStory = () => {
@@ -39,18 +43,6 @@ class App extends Component {
     }
   }
 
-  changeStoryVisibility = () => {
-    this.setState({
-      isStoryVisible: true,
-    });
-  }
-
-  clearStoryWords = () => {
-    this.setState({
-      selectedMadLib: {},
-    });
-  }
-
   hideStory = () => {
     this.setState({
       isStoryVisible: false,
@@ -58,7 +50,6 @@ class App extends Component {
   }
 
   updateStoryForm = (storyIndex) => {
-    this.clearStoryWords();
     this.hideStory();
     this.setState({
       selectedMadLib: MadLibs[storyIndex],
@@ -67,7 +58,7 @@ class App extends Component {
 
   render() {
     let titles = [];
-    MadLibs.map ((madlib) => {
+    MadLibs.forEach((madlib) => {
       titles.push(madlib.title);
     });
 
