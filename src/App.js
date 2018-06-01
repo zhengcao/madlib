@@ -3,6 +3,7 @@ import './App.css';
 import MadLibs from './madlibs/MadLibs.js';
 import Story from './components/Story.js';
 import NewStoryForm from './components/NewStoryForm.js';
+import DropDownMenu from './components/DropDownMenu.js';
 
 class App extends Component {
   constructor() {
@@ -44,10 +45,24 @@ class App extends Component {
     });
   }
 
+  updateStoryForm = (storyIndex) => {
+    console.log(storyIndex);
+  }
+
   render() {
+    let titles = [];
+    MadLibs.map ((madlib) => {
+      titles.push(madlib.title);
+    });
+
     return (
       <section className="App">
         <h1>Welcome to MadLibs!</h1>
+        <p>Choose your story from the following options</p>
+        <DropDownMenu
+          titles={titles}
+          updateStoryForm={this.updateStoryForm}
+          />
         <p>Fill in all of the choices to see your final story.</p>
         <NewStoryForm
           updateWord={this.updateWord}
