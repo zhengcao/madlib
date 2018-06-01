@@ -45,7 +45,21 @@ class App extends Component {
     });
   }
 
+  clearStoryWords = () => {
+    for (let word in MadLibs.words) {
+      word.value = '';
+    }
+  }
+
+  hideStory = () => {
+    this.setState({
+      isStoryVisible: false,
+    });
+  }
+
   updateStoryForm = (storyIndex) => {
+    this.clearStoryWords();
+    this.hideStory();
     this.setState({
       selectedMadLib: MadLibs[storyIndex],
     });
