@@ -46,9 +46,9 @@ class App extends Component {
   }
 
   clearStoryWords = () => {
-    for (let word in MadLibs.words) {
-      word.value = '';
-    }
+    this.setState({
+      selectedMadLib: {}
+    });
   }
 
   hideStory = () => {
