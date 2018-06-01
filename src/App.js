@@ -33,6 +33,7 @@ class App extends Component {
         <p>Fill in all of the choices to see your final story.</p>
         <NewStoryForm
           updateWord={this.updateWord}
+          words={this.state.selectedMadLib.words}
           />
         <Story
           title={ this.state.selectedMadLib.title }
