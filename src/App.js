@@ -9,7 +9,8 @@ class App extends Component {
     super();
 
     this.state = {
-      selectedMadLib: MadLibs[0]
+      selectedMadLib: MadLibs[0],
+      isStoryVisible: false,
     };
 
     this.updateWord = this.updateWord.bind(this);
@@ -26,6 +27,23 @@ class App extends Component {
     this.setState({selectedMadLib: updatedMadLib});
   }
 
+  showStory = () => {
+    if (this.state.isStoryVisible) {
+      return(
+        <Story
+          title={ this.state.selectedMadLib.title }
+          text={ this.state.selectedMadLib.getText() }
+          />
+      );
+    }
+  }
+
+  changeStoryVisibility = () => {
+    this.setState({
+      isStoryVisible: true,
+    });
+  }
+
   render() {
     return (
       <section className="App">
@@ -34,11 +52,9 @@ class App extends Component {
         <NewStoryForm
           updateWord={this.updateWord}
           words={this.state.selectedMadLib.words}
+          changeStoryVisibility={this.changeStoryVisibility}
           />
-        <Story
-          title={ this.state.selectedMadLib.title }
-          text={ this.state.selectedMadLib.getText() }
-          />
+        {this.showStory()}
       </section>
     );
   }

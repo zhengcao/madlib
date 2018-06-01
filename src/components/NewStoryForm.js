@@ -7,10 +7,16 @@ class NewStoryForm extends Component {
   static propTypes = {
     updateWord: PropTypes.func.isRequired,
     words: PropTypes.array.isRequired,
+    changeStoryVisibility: PropTypes.func.isRequired,
   }
 
   onFieldChange = (key, value) => {
     this.props.updateWord(key, value);
+  }
+
+  onSubmit = (event) => {
+    event.preventDefault();
+    this.props.changeStoryVisibility();
   }
 
   render() {
@@ -29,7 +35,10 @@ class NewStoryForm extends Component {
 
     return (
       <section>
-        <form  className="new-story-form">
+        <form
+          className="new-story-form"
+          onSubmit={this.onSubmit}
+        >
           {inputs}
           <input type="submit" />
         </form>
