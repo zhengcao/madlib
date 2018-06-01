@@ -23,7 +23,6 @@ class DropDownMenu extends Component {
         className="dropdown"
         onChange={(event) => {this.onSelect(event.target.value)}}
         >
-        <option selected="true" disabled="true">Choose A Story...</option>
         {options}
       </select>
     );

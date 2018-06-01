@@ -10,7 +10,7 @@ class App extends Component {
     super();
 
     this.state = {
-      selectedMadLib: MadLibs[Math.floor(Math.random() * 4)],
+      selectedMadLib: MadLibs[0],
       isStoryVisible: false,
     };
 
@@ -47,7 +47,7 @@ class App extends Component {
 
   clearStoryWords = () => {
     this.setState({
-      selectedMadLib: {}
+      selectedMadLib: {},
     });
   }
 
