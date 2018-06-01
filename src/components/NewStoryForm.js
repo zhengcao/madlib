@@ -23,7 +23,7 @@ class NewStoryForm extends Component {
     let words = this.props.words;
     let inputs = words.map((word) => {
           return(
-            <section key={word.key}>
+            <section key={word.key} className="label-input">
               <label>{word.label}</label>
               <input
                name={word.key}
@@ -34,15 +34,13 @@ class NewStoryForm extends Component {
         });
 
     return (
-      <section>
-        <form
-          className="new-story-form"
-          onSubmit={this.onSubmit}
-        >
-          {inputs}
-          <input type="submit" />
-        </form>
-      </section>
+      <form
+        className="new-story-form"
+        onSubmit={this.onSubmit}
+      >
+        {inputs}
+        <input type="submit" className="button" />
+      </form>
     );
   }
 }
