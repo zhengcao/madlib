@@ -43,16 +43,10 @@ class App extends Component {
     }
   }
 
-  hideStory = () => {
-    this.setState({
-      isStoryVisible: false,
-    });
-  }
-
   updateStoryForm = (storyIndex) => {
-    this.hideStory();
     this.setState({
       selectedMadLib: MadLibs[storyIndex],
+      isStoryVisible: false,
     });
   }
 

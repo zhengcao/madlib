@@ -38,7 +38,7 @@ class NewStoryForm extends Component {
       <form
         className="new-story-form"
         onSubmit={this.onSubmit}
-      >
+        >
         {inputs}
         <input type="submit" className="button" />
       </form>
